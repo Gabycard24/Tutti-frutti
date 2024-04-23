@@ -1,4 +1,5 @@
 Tutti-frutti
+
 Description: Tutti-frutti is a fast-paced and addictive arcade game where players must catch falling fruits to score points while avoiding missing them to prevent losing points. Set in a vibrant and colorful orchard, players take control of a lively character tasked with collecting as many fruits as possible
 
 Gameplay:
