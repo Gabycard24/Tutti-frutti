@@ -1,15 +1,17 @@
 import pygame
 from pygame.sprite import Sprite
+import os
+
+assets_dir = os.path.join(os.path.dirname(__file__), 'assets/images')
 
 class Character(Sprite):
     def __init__(self):
         super().__init__()
-        self.image = pygame.Surface((50, 50))
-        self.image.fill((255, 0, 0))  # Color rojo para el personaje
+        self.image = pygame.image.load(os.path.join(assets_dir, "character.png"))
         self.rect = self.image.get_rect()
-        self.rect.centerx = 400  # Posición inicial en el centro horizontal de la ventana
-        self.rect.bottom = 580   # Posición inicial en la parte inferior de la ventana
-        self.speed = 5
+        self.rect.centerx = 400  # Initial Hor position
+        self.rect.bottom = 600   # Initial Ver position
+        self.speed = 10
 
     def move_left(self):
         self.rect.x -= self.speed
@@ -22,8 +24,8 @@ class Character(Sprite):
             self.rect.right = 800
 
     def reset_position(self):
-        self.rect.centerx = 400  # Restablecer la posición horizontal al centro de la ventana
-        self.rect.bottom = 580   # Restablecer la posición vertical en la parte inferior de la ventana
+        self.rect.centerx = 400  # Reset horizontal position to be in the middle of the window 
+        self.rect.bottom = 580   # Reset Vertical position to be in the middle of the window
 
     def get_image(self):
         return self.image
